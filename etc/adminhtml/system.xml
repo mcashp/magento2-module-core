@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="mcashp" sortOrder="1000" translate="label">
+			<label>MCASHP</label>
+		</tab>
+		<section id="mcashpcore" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
+			<label>General</label>
+			<tab>mcashp</tab>
+			<resource>Mcashp_Core::config_mcashp_core</resource>
+			<group id="webmaster" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
+				<label>Webmaster</label>
+                <comment><![CDATA[
+                You need to have an MCASHP account on <a href="https://www.mcashp.com/register/850">https://www.mcashp.com/</a>.<br />
+                If you need support, please send us a message in your MCASHP member area.<br />
+                ]]></comment>
+				<field id="api" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>API key</label>
+					<comment/>
+                    <validate>validate-data</validate>
+				</field>
+				<field id="wmid" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Webmaster ID</label>
+					<comment/>
+                    <validate>validate-digits</validate>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
